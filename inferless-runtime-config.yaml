@@ -5,6 +5,7 @@ build:
     - hf-transfer==0.1.9
     - huggingface-hub==0.27.1
     - accelerate==1.2.1
+    - vllm==0.6.6.post1
     - torch==2.5.1
     - transformers==4.48.2
     - bitsandbytes==0.45.2
