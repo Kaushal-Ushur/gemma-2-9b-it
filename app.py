@@ -1,5 +1,10 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
+import os
+import huggingface_hub
+
+hf_token = os.getenv("HF_TOKEN")
+huggingface_hub.login(hf_token)
 
 class InferlessPythonModel:
     def initialize(self):
