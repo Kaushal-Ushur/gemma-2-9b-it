@@ -19,7 +19,7 @@ class InferlessPythonModel:
         prompt = inputs["prompt"]
         temperature = inputs.get("temperature", 0.7)
         top_p = inputs.get("top_p", 0.1)
-        top_k = inputs.get("top_k", 40)
+        top_k = int(inputs.get("top_k",40))
         repetition_penalty = float(inputs.get("repetition_penalty", 1.18))
         max_new_tokens = inputs.get("max_new_tokens", 256)
       
