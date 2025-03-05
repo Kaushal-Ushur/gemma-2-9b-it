@@ -15,9 +15,11 @@ class InferlessPythonModel:
         repetition_penalty = float(inputs.get("repetition_penalty", 1.18))
         max_new_tokens = inputs.get("max_new_tokens", 256)
       
-        messages = [{"role": "user", "content": prompt}]
-        input_ids = self.tokenizer.apply_chat_template(messages, return_tensors="pt", return_dict=True).to("cuda")
-      
+        # messages = [{"role": "user", "content": prompt}]
+        # input_ids = self.tokenizer.apply_chat_template(messages, return_tensors="pt", return_dict=True).to("cuda")
+
+        input_ids = self.tokenizer(prompt, return_tensors="pt", max_length=2048, truncation=True).to("cuda")
+
         outputs = self.model.generate(
             **input_ids, 
             max_new_tokens=max_new_tokens, 

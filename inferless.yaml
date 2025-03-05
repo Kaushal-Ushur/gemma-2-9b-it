@@ -19,7 +19,7 @@ configuration:
   custom_volume_id: ''
   custom_volume_name: ''
 
-  gpu_type: A10
+  gpu_type: A100
   inference_time: '180'
   is_dedicated: true
   is_serverless: false
@@ -32,7 +32,7 @@ configuration:
 env:
   # Add your environment variables here
   # ENV: 'PROD'
-  HF_TOKEN: '<YOUR_HUGGINGFACE_ACCESS_TOKEN>'
+  HF_TOKEN: ''
 secrets:
   # Add your secret ids here you can find it by running `inferless secrets list`
   # - 65723205-ce21-4392-a10b-3tf00c58988c
@@ -40,6 +40,6 @@ optional:
   # you can update file names here
   input_file_name: input.json
   output_file_name: output.json
-model_url: https://github.com/inferless/gemma-2-9b-it.git
+model_url: https://github.com/Kaushal-Ushur/gemma-2-9b-it.git
 provider: GITHUB
 io_schema: true
